@@ -1,0 +1,45 @@
+NOKEYUANdeMacBook-Pro:tut3-yuanbaij nokeyuan$ time ./dolist
+Thread 1 inserted 10000 values
+Thread 4 inserted 10000 values
+Thread 0 inserted 10000 values
+Thread 2 inserted 10000 values
+Thread 6 inserted 10000 values
+Thread 7 inserted 10000 values
+Thread 5 inserted 10000 values
+Thread 3 inserted 10000 values
+Total inserts = 80000
+Final length = 79594
+
+real	0m4.354s
+user	0m30.469s
+sys	0m0.076s
+NOKEYUANdeMacBook-Pro:tut3-yuanbaij nokeyuan$ time ./dosync
+Thread 3 inserted 10000 values
+Thread 5 inserted 10000 values
+Thread 4 inserted 10000 values
+Thread 7 inserted 10000 values
+Thread 2 inserted 10000 values
+Thread 0 inserted 10000 values
+Thread 1 inserted 10000 values
+Thread 6 inserted 10000 values
+Total inserts = 80000
+Final length = 80000
+
+real	0m31.757s
+user	0m31.362s
+sys	0m0.359s
+NOKEYUANdeMacBook-Pro:tut3-yuanbaij nokeyuan$ time ./handoff
+Thread 0 inserted 10000 values
+Thread 3 inserted 10000 values
+Thread 4 inserted 10000 values
+Thread 1 inserted 10000 values
+Thread 7 inserted 10000 values
+Thread 6 inserted 10000 values
+Thread 5 inserted 10000 values
+Thread 2 inserted 10000 values
+Total inserts = 80000
+Final length = 80000
+
+real	0m10.378s
+user	1m14.138s
+sys	0m1.220s
